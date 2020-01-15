@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    background-image: url("ciel.png");
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffcd03;
+    perspective: 300px;
+}
+
+section {
+    width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    transform: rotateX(30deg);
+    animation: animateCrawl 60s ease-in;
+}
+
+.phrase {
+    animation: fade-in-out 10s;
+    opacity: 0;
+    text-align: center;
+    color: blue;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animateCrawl {
+    0% {
+        transform: rotateX(30deg) translateY(1550px);
+    }
+
+    100% {
+        transform: rotateX(30deg) translateY(-2000px);
+    }
+}
