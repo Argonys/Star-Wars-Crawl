@@ -8,22 +8,34 @@ body {
     perspective: 300px;
 }
 
-section {
+.starwars {
     width: 800px;
     text-align: center;
     margin: 0 auto;
     transform: rotateX(30deg);
-    animation: animateCrawl 60s ease-in;
+    animation: Crawl 30s ease-in;
+    opacity: 0;
 }
 
 .phrase {
-    animation: fade-in-out 10s;
+    animation: fade 6s;
     opacity: 0;
-    text-align: center;
     color: blue;
 }
 
-@keyframes fade-in-out {
+@keyframes Crawl {
+    0% {
+        transform: rotateX(30deg) translateY(1000px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(30deg) translateY(-2000px);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
     0% {
         opacity: 0;
     }
@@ -35,15 +47,5 @@ section {
     }
     100% {
         opacity: 0;
-    }
-}
-
-@keyframes animateCrawl {
-    0% {
-        transform: rotateX(30deg) translateY(1550px);
-    }
-
-    100% {
-        transform: rotateX(30deg) translateY(-2000px);
     }
 }
