@@ -12,9 +12,10 @@ body {
     width: 800px;
     text-align: center;
     margin: 0 auto;
-    transform: rotateX(30deg);
-    animation: Crawl 30s ease-in;
     opacity: 0;
+    transform: rotateX(30deg);
+    animation: Crawl 60s ease-in;
+    perspective: inherit;
 }
 
 .phrase {
